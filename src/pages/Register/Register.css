@@ -1,0 +1,11 @@
+.auth-card--wide { max-width: 600px; }
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+@media (max-width: 540px) {
+  .register-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,257 @@
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-alt) 60%, #1a1040 100%);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero__content { color: var(--color-white); }
+
+.hero__sub {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.hero__title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.hero__title span { color: var(--color-primary); }
+
+.hero__desc {
+  font-size: 17px;
+  color: rgba(255,255,255,0.65);
+  max-width: 420px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.hero__actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+.hero__stats { display: flex; align-items: center; gap: 24px; }
+
+.hero__stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.15); }
+
+.hero__stat { display: flex; flex-direction: column; }
+
+.hero__stat-number { font-size: 22px; font-weight: 800; color: var(--color-white); }
+
+.hero__stat-label { font-size: 12px; color: rgba(255,255,255,0.55); }
+
+/* Hero visual */
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 480px;
+}
+
+.hero__circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero__circle--1 {
+  width: 380px;
+  height: 380px;
+  background: rgba(233,69,96,0.12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__circle--2 {
+  width: 280px;
+  height: 280px;
+  background: rgba(233,69,96,0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero__image-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 340px;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero__image { width: 100%; height: 100%; object-fit: cover; }
+
+.hero__badge {
+  position: absolute;
+  z-index: 2;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero__badge--sale {
+  top: 40px;
+  right: 0;
+  background: var(--color-primary);
+  color: var(--color-white);
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+}
+
+.hero__badge-pct { font-size: 20px; font-weight: 900; line-height: 1; }
+
+.hero__badge--free {
+  bottom: 60px;
+  left: -10px;
+  color: var(--color-dark);
+}
+
+/* ─── Categories ────────────────────────────────────────── */
+.categories { padding: 72px 0 0; }
+
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 16px;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.category-card:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+.category-card--active {
+  border-color: var(--color-primary);
+  background: rgba(233,69,96,0.06);
+  color: var(--color-primary);
+}
+
+.category-card__emoji { font-size: 32px; }
+
+.category-card__label { font-size: 14px; }
+
+/* ─── Featured / Products ───────────────────────────────── */
+.featured { padding: 72px 0; }
+
+.home__filter-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.home__pill {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-white);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  transition: var(--transition);
+}
+
+.home__pill:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.home__pill--active { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-white); font-weight: 600; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.home__empty {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--color-text-muted);
+}
+.home__empty span { font-size: 48px; display: block; margin-bottom: 12px; }
+
+/* ─── Promo Banner ──────────────────────────────────────── */
+.promo-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: 48px 0;
+  margin-top: 32px;
+}
+
+.promo-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.promo-banner__title { font-size: 24px; font-weight: 800; color: var(--color-white); margin-bottom: 6px; }
+.promo-banner__sub { color: rgba(255,255,255,0.8); font-size: 15px; }
+
+.promo-banner .btn--primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.promo-banner .btn--primary:hover { background: var(--color-bg); }
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero__visual { height: 320px; }
+  .hero__title { font-size: 36px; }
+  .hero__desc { margin: 0 auto 32px; }
+  .hero__actions { justify-content: center; }
+  .hero__stats { justify-content: center; }
+  .hero__image-wrapper { width: 260px; height: 290px; }
+  .categories__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 48px 0; }
+  .hero__title { font-size: 30px; }
+  .categories__grid { grid-template-columns: repeat(2, 1fr); }
+  .promo-banner__inner { flex-direction: column; text-align: center; }
+  .featured { padding: 48px 0; }
+}
