@@ -1,4 +1,4 @@
-# ShopEase — Full-Stack Ecommerce App
+# Kairo — Full-Stack Ecommerce App
 
 A production-quality ecommerce application built with React (Vite), Node.js/Express, and PostgreSQL.
 
@@ -125,7 +125,7 @@ git push -u origin main
 1. Go to **https://supabase.com** and click **Start your project** → sign up / log in.
 2. Click **New project**.
 3. Fill in:
-   - **Name**: `shopease` (or any name)
+   - **Name**: `Kairo` (or any name)
    - **Database password**: choose a strong password — **save this, you will need it**.
    - **Region**: pick the one closest to your users.
 4. Click **Create new project** and wait ~2 minutes for provisioning.
@@ -184,7 +184,7 @@ You should see 9 rows.
 
    | Setting | Value |
    |---|---|
-   | **Name** | `shopease-api` (or any name) |
+   | **Name** | `Kairo-api` (or any name) |
    | **Region** | Closest to your users |
    | **Root directory** | `BackEnd` |
    | **Runtime** | Node |
@@ -213,8 +213,8 @@ Click **Add Environment Variable** for each:
 1. Click **Create Web Service**.
 2. Render will pull your code, run `npm install`, and start the server.
 3. Watch the deploy log — look for `🚀 Server running on port 10000` (Render assigns its own port via the `PORT` env var which Express automatically uses).
-4. Once live, your API URL will be something like `https://shopease-api.onrender.com`.
-5. **Test it** by visiting `https://shopease-api.onrender.com/api/health` — you should see `{"status":"ok"}`.
+4. Once live, your API URL will be something like `https://kairo-n40u.onrender.com`.
+5. **Test it** by visiting `https://kairo-n40u.onrender.com/api/health` — you should see `{"status":"ok"}`.
 
 > **Important — Render free tier sleep:**  
 > Free Render services spin down after **15 minutes of inactivity**. The first request after sleep takes 30–60 seconds to wake up. This is normal on the free tier. Upgrading to a paid Render plan ($7/month) removes the sleep behaviour.
@@ -250,33 +250,33 @@ Before clicking **Deploy**, click **Show advanced** → **New variable**:
 
 | Key | Value |
 |---|---|
-| `VITE_API_URL` | `https://shopease-api.onrender.com/api` ← your Render URL + `/api` |
+| `VITE_API_URL` | `https://kairo-n40u.onrender.com/api` ← your Render URL + `/api` |
 
 > `VITE_API_URL` is read at **build time** by Vite (all `VITE_` prefixed variables are baked into the bundle). Every time you change this value you must trigger a new deploy.
 
 #### 3.5 Deploy
 
 1. Click **Deploy site**.
-2. Netlify builds the React app (`npm run build`), uploads the `dist/` folder, and gives you a URL like `https://random-name-123456.netlify.app`.
+2. Netlify builds the React app (`npm run build`), uploads the `dist/` folder, and gives you a URL like `https://mykairo.netlify.app`.
 3. Visit your site — it should be live.
 
 #### 3.6 (Optional) Set a custom subdomain
 
-In **Site configuration** → **Domain management** → click **Options** → **Edit site name** to change the subdomain to something like `shopease.netlify.app`.
+In **Site configuration** → **Domain management** → click **Options** → **Edit site name** to change the subdomain to something like `Kairo.netlify.app`.
 
 #### 3.7 Go back and update Render
 
 Now that you know your Netlify URL:
 1. Go back to your Render service → **Environment**.
-2. Update `FRONTEND_URL` to `https://YOUR-SITE.netlify.app`.
+2. Update `FRONTEND_URL` to `https://mykairo.netlify.app`.
 3. Render redeploys automatically.
 
 ---
 
 ### Step 4 — Post-Deployment Checklist
 
-- [ ] Visit `https://your-api.onrender.com/api/health` → returns `{"status":"ok"}`
-- [ ] Visit your Netlify URL → homepage loads with products and images
+- [ ] Visit `https://kairo-n40u.onrender.com/api/health` → returns `{"status":"ok"}`
+- [ ] Visit `https://mykairo.netlify.app` → homepage loads with products and images
 - [ ] Register a new account → redirected to home
 - [ ] Add a product to cart → appears in cart
 - [ ] Proceed to checkout → order placed, redirected to Orders page
@@ -302,7 +302,7 @@ Now that you know your Netlify URL:
 
 | Variable | Description | Example |
 |---|---|---|
-| `VITE_API_URL` | Full URL to backend API (including `/api`) | `https://shopease-api.onrender.com/api` |
+| `VITE_API_URL` | Full URL to backend API (including `/api`) | `https://kairo-n40u.onrender.com/api` |
 
 > In local dev `VITE_API_URL` is **not set** — Vite's proxy (`/api` → `http://localhost:5000`) handles it automatically.
 

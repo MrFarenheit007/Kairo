@@ -22,3 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+./BackEnd/node_modules
+./BackEnd/dist
+./BackEnd/dist-ssr
+./BackEnd/.env
+./BackEnd/.env.local
+./BackEnd/.env.development
+./BackEnd/.env.production
+./BackEnd/.env.test
+./BackEnd/.env.*.local
+./BackEnd/.vscode/*
+!/BackEnd/.vscode/extensions.json
+./BackEnd/.idea
+./BackEnd/.DS_Store
+./BackEnd/*.suo

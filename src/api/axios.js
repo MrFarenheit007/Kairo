@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-// In development, VITE_API_URL is unset → falls back to '/api' which Vite proxies to localhost:5000.
-// In production (Netlify), set VITE_API_URL=https://your-backend.onrender.com/api
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: import.meta.env.DEV ? '/api' : 'https://kairo-n40u.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
