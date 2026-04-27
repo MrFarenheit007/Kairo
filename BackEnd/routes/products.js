@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     return res.json(result.rows);
   } catch (err) {
     console.error('Get products error:', err);
-    return res.status(500).json({ message: 'Failed to fetch products.' });
+    return res.status(500).json({ message: 'Failed to fetch products.', detail: err.message });
   }
 });
 
